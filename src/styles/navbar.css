@@ -1,0 +1,19 @@
+.navMain {
+  display: flex;
+  flex-direction: row;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  list-style-type: none;
+  background-color: #eaeaea;
+  height: 60px;
+  line-height: 60px;
+}
+.navLink {
+  margin-left: 15px;
+  margin-right: 15px;
+  font-size: 20px;
+}
+
+.navTitle {
+  margin-right: 15px;
+  font-size: 35px;
+}

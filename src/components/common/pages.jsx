@@ -1,9 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 import _ from "lodash";
+import PropTypes from "prop-types";
 
-const Page = props => {
-  const { itemsCount, pageSize, currentPage, onPageChange } = props;
-  console.log(currentPage);
+const Page = ({ itemsCount, pageSize, currentPage, onPageChange }) => {
   const pagesCount = Math.ceil(itemsCount / pageSize);
 
   if (pagesCount === 1) return null;
@@ -24,6 +23,13 @@ const Page = props => {
       </ul>
     </nav>
   );
+};
+
+Page.propTypes = {
+  itemsCount: PropTypes.number.isRequired,
+  pageSize: PropTypes.number.isRequired,
+  currentPage: PropTypes.number.isRequired,
+  onPageChange: PropTypes.func.isRequired
 };
 
 export default Page;

@@ -1,17 +1,17 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
-class MovieList extends Component {
-  render() {
-    const { movie } = this.props;
-    return (
-      <span>
-        <td>{movie.title}</td>
-        <td>{movie.genre.name}</td>
-        <td>{movie.numberInStock}</td>
-        <td>{movie.dailyRentalRate}</td>
-      </span>
-    );
-  }
-}
+const MovieList = ({ movie }) => {
+  return (
+    <span>
+      <td>
+        <Link to={`/movies/${movie._id}`}>{movie.title}</Link>
+      </td>
+      <td>{movie.genre.name}</td>
+      <td>{movie.numberInStock}</td>
+      <td>{movie.dailyRentalRate}</td>
+    </span>
+  );
+};
 
 export default MovieList;
